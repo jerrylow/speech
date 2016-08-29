@@ -1,0 +1,38 @@
+.speech {
+  overflow: hidden;
+  padding: 0 4rem 0 0;
+}
+
+.speech-inner {
+  float: right;
+  white-space: nowrap;
+}
+
+.mic {
+  -webkit-appearance: none;
+  background: url(../images/mic.svg) no-repeat;
+  background-size: 100% auto;
+  border: none;
+  cursor: pointer;
+  height: 33px;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 33px;
+}
+
+.vol {
+  background: white;
+  border-radius: 2px;
+  bottom: 15px;
+  display: block;
+  height: 0px;
+  position: absolute;
+  right: 15px;
+  transition: height 0.1s;
+  width: 3px;
+}
+
+.speech.active .vol {
+  height: 8px;
+}

@@ -1,0 +1,40 @@
+body {
+  background: black;
+  color: white;
+  font-size: 18px;
+  font-size: 1.8rem;
+  padding: 20px;
+}
+
+main {
+  padding: 1rem;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* ==========================================================================
+  Partials
+========================================================================== */
+.pages {
+  padding: 3rem;
+}
+
+.start {
+  -webkit-appearance: none;
+  background: url(../images/mic.svg) no-repeat;
+  background-size: 100% auto;
+  border: none;
+  cursor: pointer;
+  height: 80px;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  text-indent: 200%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  white-space: nowrap;
+  width: 80px;
+}

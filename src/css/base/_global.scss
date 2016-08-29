@@ -1,0 +1,28 @@
+/*
+ * Global
+ */
+
+body {
+  background: black;
+  color: white;
+  @include font-size(18);
+}
+
+main {
+  padding: 1rem;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	page-break-inside: avoid;
+	-ms-interpolation-mode: bicubic;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}

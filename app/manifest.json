@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+
+  "name": "Speech",
+  "description": "Speech to Text",
+  "version": "1.0",
+
+  "permissions": [
+    "fileSystem",
+    "unlimitedStorage",
+    "notifications",
+    "http://speech.local/speech.html",
+    "webview",
+    "audioCapture"
+  ],
+
+  "icons": {
+    "128": "speech.png"
+  },
+
+  "app": {
+    "background": {
+      "scripts": [
+        "js/background.js"
+      ],
+      "persistent": false
+    }
+  },
+
+  "minimum_chrome_version": "23"
+}

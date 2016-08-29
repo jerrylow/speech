@@ -1,0 +1,109 @@
+/**
+ * RESPONSIVE
+ */
+
+@mixin respond-to($media) {
+  // min-width breakpoints.
+  @if $media == xs {
+    @media only screen and (min-width: 480px) {
+      @content;
+    }
+  }
+  @if $media == sm {
+    @media only screen and (min-width: 736px) {
+      @content;
+    }
+  }
+  @if $media == md {
+    @media only screen and (min-width: 1024px) {
+      @content;
+    }
+  }
+  @if $media == lg {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  // max-width breakpoints.
+  @if $media == xxs {
+    @media only screen and (max-width: 320px) {
+      @content;
+    }
+  }
+  @if $media == xs-less {
+    @media only screen and (max-width: 479px) {
+      @content;
+    }
+  }
+  @if $media == sm-less {
+    @media only screen and (max-width: 735px) {
+      @content;
+    }
+  }
+  @if $media == md-less {
+    @media only screen and (max-width: 1023px) {
+      @content;
+    }
+  }
+  @if $media == lg-less {
+    @media only screen and (min-width: 1199px) {
+      @content;
+    }
+  }
+
+  // breakpoint ranges
+  @if $media == sm-to-md {
+    @media only screen and (min-width: 736px) and (max-width: 1023px) {
+      @content;
+    }
+  }
+}
+
+/**
+ * FONTS
+ */
+@mixin font-size($fontsize) {
+  font-size: $fontsize + px;
+  font-size: ($fontsize / 10) + rem;
+}
+
+@mixin hide-text() {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+
+/**
+ * MISC
+ */
+@mixin placeholder() {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    @content;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin clearfix() {
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+    height: 0;
+    overflow: hidden;
+  }
+
+  zoom: 1; /* IE < 8 */
+}

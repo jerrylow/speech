@@ -1,0 +1,64 @@
+{
+  "root": {
+    "src": "./src",
+    "serveDest":"./tmp",
+    "buildDest":"./build"
+  },
+
+  "tasks": {
+    "browserSync": {
+      "server": {
+        "baseDir": "tmp"
+      }
+    },
+    "static": {
+      "src": "./",
+      "dest": "./"
+    },
+    "css": {
+      "src": "css",
+      "dest": "css",
+      "autoprefixer": {
+        "browsers": [
+          "ie >= 10",
+          "ie_mob >= 10",
+          "ff >= 30",
+          "chrome >= 34",
+          "safari >= 7",
+          "opera >= 23",
+          "ios >= 7",
+          "android >= 4.4",
+          "bb >= 10"
+        ]
+      },
+      "extensions": ["sass", "scss", "css"],
+      "sass": {
+      }
+    },
+    "html": {
+      "src":"./",
+      "dest":"./",
+      "extensions": ["njk", "html"],
+      "nunjucks":{
+        "partials":"markup/partials",
+        "pages":"markup/pages",
+        "data":"data"
+      }
+    },
+    "js": {
+      "src": "js",
+      "dest": "js",
+      "extensions": ["js"],
+      "browserify":{
+        "entries":"main.js",
+        "bundleName":"bundle.js",
+        "debug":true
+      }
+    },
+    "images": {
+      "src": "images",
+      "dest": "images",
+      "extensions": ["svg", "png", "jpg"]
+    }
+  }
+}

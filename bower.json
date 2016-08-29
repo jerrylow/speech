@@ -1,0 +1,9 @@
+{
+  "name": "gulp-start-kit-modular",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "jquery": ">=1.12.3",
+    "normalize-css": ">=4.1.1"
+  }
+}
